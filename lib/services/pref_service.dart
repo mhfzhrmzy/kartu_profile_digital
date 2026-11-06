@@ -43,4 +43,7 @@ class PrefService {
       _prefs.setString(_kProfile, profile.toJson());
 
   Future<void> clearProfile() => _prefs.remove(_kProfile);
+
+  // ---------- Debugging ----------
+  Set<String> get debugKeys => _prefs.getKeys();
 }
